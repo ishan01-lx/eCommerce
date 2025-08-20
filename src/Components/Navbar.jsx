@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
@@ -9,30 +10,37 @@ const Navbar = () => {
             <div className="flex items-center space-x-8">
               <div className="shrink-0">
                 <a href="#" title="" className="">
-                  <p className="text-amber-500 font-extrabold text-3xl">Shopp<span className="text-amber-50 font-bold">io</span></p>
+                  <p className="text-amber-500 font-extrabold text-3xl">
+                    Shopp<span className="text-amber-50 font-bold">io</span>
+                  </p>
                 </a>
               </div>
 
-              <ul className="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
+              <ul className="hidden lg:flex items-center ml-10 justify-start gap-4 md:gap-8 py-3 sm:justify-center">
                 <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
-                  >
-                    Home
-                  </a>
+                  <Link to={"/"}>
+                    <a
+                      href="#"
+                      title=""
+                      className="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    >
+                      Home
+                    </a>
+                  </Link>
                 </li>
                 <li className="shrink-0">
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
-                  >
-                    Products
-                  </a>
+                  <Link to="/product">
+                    <a
+                      href="#"
+                      title=""
+                      className="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500"
+                    >
+                      Products
+                    </a>
+                  </Link>
                 </li>
                 <li className="shrink-0">
+                    <Link to="/categories">
                   <a
                     href="#"
                     title=""
@@ -40,8 +48,10 @@ const Navbar = () => {
                   >
                     Categories
                   </a>
+                  </Link>
                 </li>
                 <li className="shrink-0">
+                    <Link to="/about">
                   <a
                     href="#"
                     title=""
@@ -49,8 +59,10 @@ const Navbar = () => {
                   >
                     About
                   </a>
+                  </Link>
                 </li>
                 <li className="shrink-0">
+                    <Link to="/contact">
                   <a
                     href="#"
                     title=""
@@ -58,9 +70,45 @@ const Navbar = () => {
                   >
                     Contact
                   </a>
+                  </Link>
                 </li>
               </ul>
             </div>
+
+            <form class="max-w-md mx-auto hidden md:flex">
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              >
+                Search
+              </label>
+              <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg
+                    class="w-4 h-3 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search Products..."
+                  required
+                />
+              </div>
+            </form>
 
             <div className="flex items-center lg:space-x-2">
               <button

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import CategoryButtons from "../Components/CategoryButtons";
 import Laptop from '../images/laptop.jpg'
 import hero from "../images/hero.jpg";
-import Speaker from '../images/speaker.jpg'
+import Speaker from '../images/speaker2.jpg'
+import Joystick from '../images/joystick.jpg'
 import SmartWatch from '../images/smartwatch.jpg'
 import Iphone from '../images/iphone.jpg'
 import Headphone from '../images/headphone.jpg'
+import Earbuds from '../images/earbuds.jpg'
 
 
 
@@ -48,7 +50,7 @@ const productsData = [
   },
   {
     id: 4,
-    name: "Iphone 16 Pro Max",
+    name: "iPhone 16",
     category: "Accessories",
     price: 1159,
     oldPrice: 1499,
@@ -60,15 +62,15 @@ const productsData = [
   },
   {
     id: 5,
-    name: "Iphone 16 Pro Max",
-    category: "Accessories",
-    price: 1159,
-    oldPrice: 1499,
-    discount: 13,
-    rating: 4.8,
-    reviews: 807,
-    image: Laptop,
-    badge: "Featured",
+    name: "BoAt Stone 1200 | Smart Speaker",
+    category: "Speakers",
+    price: 198,
+    oldPrice: 246,
+    discount: 32,
+    rating: 4.9,
+    reviews: 898,
+    image: Speaker,
+    badge: "Best Product",
   },
   {
     id: 6,
@@ -80,6 +82,30 @@ const productsData = [
     rating: 4.5,
     reviews: 1284,
     image: Headphone,
+    badge: "Best Seller",
+  },
+  {
+    id: 7,
+    name: "Apple AirPods Pro 2",
+    category: "Accessories",
+    price: 560,
+    oldPrice: 780,
+    discount: 25,
+    rating: 4.5,
+    reviews: 1284,
+    image: Earbuds,
+    badge: "Best Seller",
+  },
+    {
+    id: 8,
+    name: "XBox Elite Series 2 Controller",
+    category: "Accessories",
+    price: 560,
+    oldPrice: 780,
+    discount: 25,
+    rating: 4.5,
+    reviews: 1284,
+    image: Joystick,
     badge: "Best Seller",
   },
 ];

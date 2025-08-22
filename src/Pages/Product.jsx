@@ -4,6 +4,10 @@ import Laptop from '../images/laptop.jpg'
 import hero from "../images/hero.jpg";
 import Speaker from '../images/speaker.jpg'
 import SmartWatch from '../images/smartwatch.jpg'
+import Iphone from '../images/iphone.jpg'
+import Headphone from '../images/headphone.jpg'
+
+
 
 const productsData = [
   {
@@ -42,6 +46,42 @@ const productsData = [
     image: Laptop,
     badge: "Featured",
   },
+  {
+    id: 4,
+    name: "Iphone 16 Pro Max",
+    category: "Accessories",
+    price: 1159,
+    oldPrice: 1499,
+    discount: 13,
+    rating: 4.8,
+    reviews: 807,
+    image: Iphone,
+    badge: "Featured",
+  },
+  {
+    id: 5,
+    name: "Iphone 16 Pro Max",
+    category: "Accessories",
+    price: 1159,
+    oldPrice: 1499,
+    discount: 13,
+    rating: 4.8,
+    reviews: 807,
+    image: Laptop,
+    badge: "Featured",
+  },
+  {
+    id: 6,
+    name: "JBL Tune 720BT - Wireless",
+    category: "Headphones",
+    price: 560,
+    oldPrice: 780,
+    discount: 25,
+    rating: 4.5,
+    reviews: 1284,
+    image: Headphone,
+    badge: "Best Seller",
+  },
 ];
 
 const Product = () => {
@@ -54,16 +94,20 @@ const Product = () => {
       : productsData.filter((item) => item.category === activeCategory);
 
   return (
-    <div className="bg-gray-950 pt-20 md:pt-32 w-full min-h-screen px-4 md:px-16 font-bold">
+    <div className="bg-gray-950 pt-20 md:pt-32 max-w-screen min-h-screen px-4 md:px-16 font-bold">
       {/* Headings */}
-      <div className="min-w-screen flex items-center justify-center flex-col text-center">
+      <div className="w-full flex items-center justify-center flex-col text-center">
         <h1 className="text-3xl mb-5 md:text-5xl md:text-semibold bg-gradient-to-r from-indigo-200 via-purple-400 to-pink-400 bg-clip-text text-transparent">
           Featured Products
         </h1>
-        <p className="text-gray-300 text-xl font-light font-sans">
+        <p className="text-gray-300 text-xl font-light font-sans hidden md:flex">
           Discover our carefully curated selection of premium tech products
           designed to enhance your lifestyle.
         </p>
+        <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">
+          Discover our carefully curated selection        </p>
+          <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">of premium tech products</p>
+          <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">designed to enhance your lifestyle.</p>
       </div>
 
       {/* Category Buttons */}
@@ -84,7 +128,7 @@ const Product = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-60 md:h-80 object-cover transition-transform duration-300 group-hover:scale-105"
               />
 
               {/* Badge & Discount */}

@@ -59,19 +59,19 @@ const Home = () => {
         {/* Animated Stats Section */}
         <div className="flex justify-center md:justify-start gap-10 mt-12 animate-fade-in-up">
           <div className="text-center">
-            <div className="text-4xl font-extrabold text-gray-200">
+            <div className="text-4xl font-extrabold text-gray-600">
               <Counter to={50} duration={1000} />K+
             </div>
             <div className="text-gray-400 text-lg mt-1">Happy Customers</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-extrabold text-gray-200">
+            <div className="text-4xl font-extrabold text-gray-600">
               <Counter to={4.9} duration={1200} />
             </div>
             <div className="text-gray-400 text-lg mt-1">Average Rating</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-extrabold text-gray-200">
+            <div className="text-4xl font-extrabold text-gray-600">
               <Counter to={1000} duration={1200} />+
             </div>
             <div className="text-gray-400 text-lg mt-1">Products</div>
@@ -80,27 +80,15 @@ const Home = () => {
       </div>
 
       {/* Hero Image with Floating Elements */}
-      <div className="relative w-full md:w-[480px] h-[400px] md:h-[500px] flex items-center justify-center mt-12 md:mt-0 z-10">
+      <div className="relative w-full md:w-[700px] h-[250px] md:h-[500px] flex items-center justify-center mt-12 md:mt-0 z-10">
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-pink-400/20 to-amber-300/10 rounded-3xl blur-2xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-pink-400/20 to-amber-300/10 rounded-3xl blur-2xl "></div>
         {/* Hero Image */}
         <img
           src={hero}
           alt="Premium Wireless Headphones"
-          className="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white/10"
+          className="relative z-10 w-full h-full object-cover rounded-3xl shadow-2xl hover:shadow-2xl hover:shadow-gray-600 transition-colors duration-1000 animate-float"
         />
-        {/* Floating: In Stock */}
-        <div className="absolute top-6 left-6 glass-card p-4 rounded-2xl shadow-lg animate-fade-in-up backdrop-blur-md bg-white/20 border border-white/30">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-white">In Stock</span>
-          </div>
-        </div>
-        {/* Floating: Price */}
-        <div className="absolute bottom-6 right-6 glass-card p-4 rounded-2xl shadow-lg animate-fade-in-up backdrop-blur-md bg-white/20 border border-white/30">
-          <div className="text-2xl font-bold text-amber-400">$299</div>
-          <div className="text-sm text-gray-200 line-through">$399</div>
-        </div>
       </div>
     </div>
   );

@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import CategoryButtons from "../Components/CategoryButtons";
-import Laptop from '../images/laptop.jpg'
+import Laptop from '../images/laptop.jpg';
 import hero from "../images/hero.jpg";
-import Speaker from '../images/speaker2.jpg'
-import Joystick from '../images/joystick.jpg'
-import SmartWatch from '../images/smartwatch.jpg'
-import Iphone from '../images/iphone.jpg'
-import Headphone from '../images/headphone.jpg'
-import Earbuds from '../images/earbuds.jpg'
-
-
+import Speaker from '../images/speaker2.jpg';
+import Joystick from '../images/joystick.jpg';
+import SmartWatch from '../images/smartwatch.jpg';
+import Iphone from '../images/iphone.jpg';
+import Headphone from '../images/headphone.jpg';
+import Earbuds from '../images/earbuds.jpg';
 
 const productsData = [
   {
@@ -96,7 +94,7 @@ const productsData = [
     image: Earbuds,
     badge: "Best Seller",
   },
-    {
+  {
     id: 8,
     name: "XBox Elite Series 2 Controller",
     category: "Accessories",
@@ -112,6 +110,7 @@ const productsData = [
 
 const Product = () => {
   const [activeCategory, setActiveCategory] = useState("All Products");
+  const [visibleProducts, setVisibleProducts] = useState(6);
 
   // Filter products based on selected category
   const filteredProducts =
@@ -119,8 +118,13 @@ const Product = () => {
       ? productsData
       : productsData.filter((item) => item.category === activeCategory);
 
+  // Show more products when clicking Load More
+  const handleLoadMore = () => {
+    setVisibleProducts((prev) => prev + 3); // Loads 3 more products per click
+  };
+
   return (
-    <div className="bg-gray-950 pt-20 md:pt-32 max-w-screen min-h-screen px-4 md:px-16 font-bold">
+    <div className="bg-gray-950 py-20 md:py-32 max-w-screen min-h-screen px-4 md:px-16 font-bold">
       {/* Headings */}
       <div className="w-full flex items-center justify-center flex-col text-center">
         <h1 className="text-3xl mb-5 md:text-5xl md:text-semibold bg-gradient-to-r from-indigo-200 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -131,9 +135,14 @@ const Product = () => {
           designed to enhance your lifestyle.
         </p>
         <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">
-          Discover our carefully curated selection        </p>
-          <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">of premium tech products</p>
-          <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">designed to enhance your lifestyle.</p>
+          Discover our carefully curated selection
+        </p>
+        <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">
+          of premium tech products
+        </p>
+        <p className="text-gray-300 text-xl font-light font-sans flex md:hidden">
+          designed to enhance your lifestyle.
+        </p>
       </div>
 
       {/* Category Buttons */}
@@ -144,7 +153,7 @@ const Product = () => {
 
       {/* Products Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
-        {filteredProducts.map((product) => (
+        {filteredProducts.slice(0, visibleProducts).map((product) => (
           <div
             key={product.id}
             className="relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-purple-500 transition-all duration-300"
@@ -209,6 +218,18 @@ const Product = () => {
           </div>
         ))}
       </div>
+
+      {/* Load More Button */}
+      {visibleProducts < filteredProducts.length && (
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={handleLoadMore}
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+          >
+            Load More Products
+          </button>
+        </div>
+      )}
     </div>
   );
 };

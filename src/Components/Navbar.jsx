@@ -40,13 +40,7 @@ const Navbar = () => {
                     </span>
                   </Link>
                 </li>
-                <li className="shrink-0">
-                  <Link to="/categories">
-                    <span className="flex text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500 hover:text-gray-600 transition-colors duration-300">
-                      Categories
-                    </span>
-                  </Link>
-                </li>
+
                 <li className="shrink-0">
                   <Link to="/about">
                     <span className="text-sm font-medium text-gray-900 hover:text-primary-700 dark:text-white dark:hover:text-primary-500 hover:text-gray-600 transition-colors duration-300">
@@ -80,13 +74,6 @@ const Navbar = () => {
                   <Link to="/product" onClick={() => setMenuOpen(false)}>
                     <span className="block px-6 py-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition">
                       Products
-                    </span>
-                  </Link>
-                </li>
-                <li className="border-b border-gray-200 dark:border-gray-700">
-                  <Link to="/categories" onClick={() => setMenuOpen(false)}>
-                    <span className="block px-6 py-3 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-                      Categories
                     </span>
                   </Link>
                 </li>

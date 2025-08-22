@@ -11,7 +11,7 @@ const CategoryButtons = ({ activeCategory, setActiveCategory }) => {
   ];
 
   return (
-    <div className="flex justify-center items-center gap-4 p-4 bg-[#050715] mt-6">
+    <div className="flex flex-wrap justify-center items-center gap-4 p-4 bg-[#050715] mt-6">
       {categories.map((category) => {
         const isActive = activeCategory === category;
 

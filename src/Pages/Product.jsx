@@ -1,70 +1,141 @@
 import React, { useState } from "react";
 import CategoryButtons from "../Components/CategoryButtons";
-import Headphones from "./Headphones";
+import Laptop from '../images/laptop.jpg'
+import hero from "../images/hero.jpg";
+import Speaker from '../images/speaker.jpg'
+import SmartWatch from '../images/smartwatch.jpg'
 
-// Dummy product data (replace with your actual products)
-const productsData = {
-  "All Products": [
-    { id: 1, name: "Sony WH-1000XM5", category: "Headphones" },
-    { id: 2, name: "Apple Watch Ultra", category: "Smart Watches" },
-    { id: 3, name: "MacBook Pro M2", category: "Laptops" },
-    { id: 4, name: "JBL BoomBox 3", category: "Speakers" },
-    { id: 5, name: "USB-C Charger", category: "Accessories" },
-  ],
-  Headphones: [
-    { id: 1, name: "Sony WH-1000XM5" },
-    { id: 2, name: "Bose 700" },
-    { id: 3, name: "AirPods Max" },
-  ],
-  "Smart Watches": [
-    { id: 4, name: "Apple Watch Ultra" },
-    { id: 5, name: "Samsung Galaxy Watch 6" },
-  ],
-  Laptops: [
-    { id: 6, name: "MacBook Pro M2" },
-    { id: 7, name: "Dell XPS 15" },
-  ],
-  Speakers: [
-    { id: 8, name: "JBL BoomBox 3" },
-    { id: 9, name: "Sony SRS-XG500" },
-  ],
-  Accessories: [
-    { id: 10, name: "USB-C Charger" },
-    { id: 11, name: "Wireless Mouse" },
-  ],
-};
+const productsData = [
+  {
+    id: 1,
+    name: "Premium Wireless Headphones",
+    category: "Headphones",
+    price: 299,
+    oldPrice: 399,
+    discount: 25,
+    rating: 4.5,
+    reviews: 1284,
+    image: hero,
+    badge: "Best Seller",
+  },
+  {
+    id: 2,
+    name: "Smart Watch Pro",
+    category: "Smart Watches",
+    price: 499,
+    oldPrice: 599,
+    discount: 17,
+    rating: 4,
+    reviews: 892,
+    image: SmartWatch,
+    badge: "New",
+  },
+  {
+    id: 3,
+    name: "Ultra-Thin Laptop",
+    category: "Laptops",
+    price: 1299,
+    oldPrice: 1499,
+    discount: 13,
+    rating: 4.2,
+    reviews: 567,
+    image: Laptop,
+    badge: "Featured",
+  },
+];
 
 const Product = () => {
   const [activeCategory, setActiveCategory] = useState("All Products");
 
+  // Filter products based on selected category
+  const filteredProducts =
+    activeCategory === "All Products"
+      ? productsData
+      : productsData.filter((item) => item.category === activeCategory);
+
   return (
-    <div className="bg-gray-950 pt-20 md:pt-32 w-full min-h-screen px-4 md:pr-16 md:pl-16 font-bold">
+    <div className="bg-gray-950 pt-20 md:pt-32 w-full min-h-screen px-4 md:px-16 font-bold">
       {/* Headings */}
-      <div className="min-w-screen flex items-center justify-center flex-col pr-4 md:pr-0">
+      <div className="min-w-screen flex items-center justify-center flex-col text-center">
         <h1 className="text-3xl mb-5 md:text-5xl md:text-semibold bg-gradient-to-r from-indigo-200 via-purple-400 to-pink-400 bg-clip-text text-transparent">
           Featured Products
         </h1>
-        <p className="text-gray-300 text-xl text-center font-light font-sans">
+        <p className="text-gray-300 text-xl font-light font-sans">
           Discover our carefully curated selection of premium tech products
-          designed
-        </p>
-        <p className="text-gray-300 text-xl text-center font-light font-sans">
-          to enhance your lifestyle
+          designed to enhance your lifestyle.
         </p>
       </div>
 
       {/* Category Buttons */}
-      <CategoryButtons activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+      <CategoryButtons
+        activeCategory={activeCategory}
+        setActiveCategory={setActiveCategory}
+      />
 
       {/* Products Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-        {productsData[activeCategory]?.map((product) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+        {filteredProducts.map((product) => (
           <div
             key={product.id}
-            className="bg-gray-800 text-white p-5 rounded-xl shadow-md hover:shadow-purple-400 transition-transform duration-300 transform hover:scale-105"
+            className="relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-purple-500 transition-all duration-300"
           >
-            <h2 className="text-xl font-semibold">{product.name}</h2>
-            <p className="text-gray-400">{product.category || activeCategory}</p>
+            {/* Product Image */}
+            <div className="relative group">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+
+              {/* Badge & Discount */}
+              <div className="absolute top-3 left-3 flex flex-col gap-2">
+                {product.badge && (
+                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-gray-900 text-xs font-bold px-2 py-1 rounded-md">
+                    {product.badge}
+                  </span>
+                )}
+                <span className="bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                  -{product.discount}%
+                </span>
+              </div>
+
+              {/* Add to Cart Button */}
+              <button className="absolute inset-0 flex justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold px-4 py-2 rounded-xl shadow-lg hover:scale-110 transition-transform">
+                  Add to Cart
+                </span>
+              </button>
+            </div>
+
+            {/* Product Info */}
+            <div className="p-4">
+              {/* Rating */}
+              <div className="flex items-center gap-1 text-yellow-400">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <span key={i}>
+                    {i < Math.round(product.rating) ? "★" : "☆"}
+                  </span>
+                ))}
+                <span className="text-gray-400 text-sm ml-1">
+                  ({product.reviews})
+                </span>
+              </div>
+
+              {/* Name */}
+              <h2 className="text-lg font-semibold text-white mt-2">
+                {product.name}
+              </h2>
+
+              {/* Price */}
+              <div className="flex items-center gap-2 mt-2">
+                <span className="text-purple-400 font-bold text-xl">
+                  ${product.price}
+                </span>
+                <span className="text-gray-500 line-through text-md">
+                  ${product.oldPrice}
+                </span>
+              </div>
+            </div>
           </div>
         ))}
       </div>

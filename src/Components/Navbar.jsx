@@ -115,7 +115,7 @@ const Navbar = () => {
                 to="/login"
                 className="px-4 py-1 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
-                Login
+                Sign in
               </Link>
 
               {/* Hamburger */}

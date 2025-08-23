@@ -54,7 +54,7 @@ const Home = () => {
             <FaArrowRightLong />
           </button>
           <button className="border border-white/30 bg-gray-950 w-full md:w-auto text-white px-8 py-3 rounded-xl md:rounded-full font-semibold hover:bg-white/10 transition">
-            Watch Demo
+            Sign in
           </button>
         </div>
 

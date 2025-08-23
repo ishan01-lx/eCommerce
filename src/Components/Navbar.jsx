@@ -41,7 +41,7 @@ const Navbar = () => {
 
             {/* Desktop Nav */}
             <ul className="hidden lg:flex items-center justify-start gap-8 py-3">
-              {["Home", "Products", "About", "Contact"].map((item, i) => (
+              {["Home", "Product", "About", "Contact"].map((item, i) => (
                 <li key={i}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

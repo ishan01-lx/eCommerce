@@ -70,7 +70,7 @@ const Typewriter = ({ words, typingSpeed = 140, pauseTime = 1500 }) => {
 const Home = () => {
   return (
     <div className="overflow-hidden">
-      <div className="relative min-h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-gray-950 via-gray-900 to-gray-900 px-4 md:px-16 pt-36 pb-12 overflow-hidden">
+      <div className="relative min-h-screen flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-gray-950 via-gray-900 to-gray-900 px-4 md:px-16 pt-28 md:pt-36 pb-12 overflow-hidden">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-6 z-10">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-gray-700 px-4 py-2 rounded-full shadow-lg backdrop-blur-md">

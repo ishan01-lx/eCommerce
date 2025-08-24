@@ -59,7 +59,7 @@ const Navbar = () => {
               {/* Search */}
               <div
                 className={`w-48 md:w-64 p-1 px-2 hidden rounded-md gap-3 md:flex text-white items-center border border-gray-500 transition-all duration-300 ${
-                  searchFocused ? "outline outline-2 outline-purple-500 shadow-md" : ""
+                  searchFocused ? "outline-2 outline-purple-500 shadow-md" : ""
                 }`}
               >
                 <IoIosSearch />
@@ -131,7 +131,7 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {menuOpen && (
             <div className="lg:hidden mt-4 space-y-2 flex flex-col bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
-              {["Home", "Products", "About", "Contact"].map((item, i) => (
+              {["Home", "Product", "About", "Contact"].map((item, i) => (
                 <Link
                   key={i}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

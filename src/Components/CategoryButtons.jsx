@@ -2,7 +2,7 @@ import React from "react";
 
 const CategoryButtons = ({ activeCategory, setActiveCategory }) => {
   const categories = [
-    "All Products",
+    "All Shoppie",
     "Phones",
     "Smart Watches",
     "Laptops",

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Signup = () => {
   return (
-    <div className="flex items-center justify-center max-h-screen bg-gradient-to-r from-purple-300 via-pink-700 to-purple-800  px-4 py-20">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-300 via-pink-700 to-purple-800  px-4 py-4">
       {/* Card */}
       <div className="bg-gray-900 text-white p-6 sm:p-8 rounded-2xl w-full max-w-sm sm:max-w-md shadow-lg">
         {/* Back to Home */}

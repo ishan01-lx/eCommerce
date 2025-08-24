@@ -28,19 +28,23 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-950 pt-16">
       <main className="container mx-auto px-6 py-12">
-        {/* Heading */}
+        <Link
+          to="/"
+          className="block text-md text-gray-400 mb-6 cursor-pointer hover:text-gray-200 md:hidden"
+        >
+          ← Back to Home
+        </Link>
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
             Get in Touch
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Have questions about our products or need assistance? We're here to help you find the perfect tech solution.
+            Have questions about our products or need assistance? We're here to
+            help you find the perfect tech solution.
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div className="bg-gray-950 rounded-2xl shadow-lg p-8 border border-gray-800">
             <h2 className="text-2xl font-semibold mb-6 text-gray-300">
               Send us a Message
@@ -48,7 +52,10 @@ const Contact = () => {
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-300">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-300"
+                  >
                     First Name
                   </label>
                   <input
@@ -59,7 +66,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-300">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-300"
+                  >
                     Last Name
                   </label>
                   <input
@@ -71,7 +81,10 @@ const Contact = () => {
                 </div>
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Email
                 </label>
                 <input
@@ -82,7 +95,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Subject
                 </label>
                 <input
@@ -93,7 +109,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Message
                 </label>
                 <textarea
@@ -137,18 +156,26 @@ const Contact = () => {
 
         {/* FAQ Section */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-400">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-400">
+            Frequently Asked Questions
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-950 rounded-2xl shadow-md p-6 border border-gray-800">
-              <h3 className="text-lg font-semibold mb-2 text-gray-300">What's your return policy?</h3>
+              <h3 className="text-lg font-semibold mb-2 text-gray-300">
+                What's your return policy?
+              </h3>
               <p className="text-gray-500">
-                We offer a 30-day return policy for all products in original condition. Free return shipping is included.
+                We offer a 30-day return policy for all products in original
+                condition. Free return shipping is included.
               </p>
             </div>
             <div className="bg-gray-950 rounded-2xl shadow-md p-6 border border-gray-800">
-              <h3 className="text-lg font-semibold mb-2 text-gray-300">Do you offer international shipping?</h3>
+              <h3 className="text-lg font-semibold mb-2 text-gray-300">
+                Do you offer international shipping?
+              </h3>
               <p className="text-gray-500">
-                Yes, we ship worldwide. International shipping costs and delivery times vary by location.
+                Yes, we ship worldwide. International shipping costs and
+                delivery times vary by location.
               </p>
             </div>
           </div>

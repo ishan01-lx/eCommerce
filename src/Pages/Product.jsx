@@ -13,6 +13,7 @@ import Mouse from '../images/mouse.jpg';
 import Samsung from '../images/samsung.jpg';
 import GoPro from '../images/gopro.jpg';
 import PowerBank from '../images/powerbank.jpg';
+import { Link } from "react-router";
 
 const productsData = [
 
@@ -192,6 +193,12 @@ const Product = () => {
 
   return (
     <div className="bg-gray-950 py-20 md:py-32 max-w-screen min-h-screen px-4 md:px-16 font-bold">
+      <Link
+          to="/"
+          className="block text-md text-gray-400 mb-6 cursor-pointer hover:text-gray-200 md:hidden"
+        >
+          ← Back to Home
+        </Link>
       {/* Headings */}
       <div className="w-full flex items-center justify-center flex-col text-center">
         <h1 className="text-3xl mb-5 md:text-5xl md:text-semibold bg-gradient-to-r from-indigo-200 via-purple-400 to-pink-400 bg-clip-text text-transparent">

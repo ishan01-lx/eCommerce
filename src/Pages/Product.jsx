@@ -8,19 +8,25 @@ import SmartWatch from '../images/smartwatch.jpg';
 import Iphone from '../images/iphone.jpg';
 import Headphone from '../images/headphone.jpg';
 import Earbuds from '../images/earbuds.jpg';
+import Earbuds2 from '../images/earbuds2.jpg';
+import Mouse from '../images/mouse.jpg';
+import Samsung from '../images/samsung.jpg';
+import GoPro from '../images/gopro.jpg';
+import PowerBank from '../images/powerbank.jpg';
 
 const productsData = [
-  {
+
+    {
     id: 1,
-    name: "Premium Wireless Headphones",
-    category: "Headphones",
-    price: 299,
-    oldPrice: 399,
-    discount: 25,
-    rating: 4.5,
-    reviews: 1284,
-    image: hero,
-    badge: "Best Seller",
+    name: "GoPro",
+    category: "Accessories",
+    price: 1159,
+    oldPrice: 1499,
+    discount: 13,
+    rating: 4.8,
+    reviews: 807,
+    image: GoPro,
+    badge: "Featured",
   },
   {
     id: 2,
@@ -49,7 +55,7 @@ const productsData = [
   {
     id: 4,
     name: "iPhone 16",
-    category: "Accessories",
+    category: "Phones",
     price: 1159,
     oldPrice: 1499,
     discount: 13,
@@ -106,6 +112,67 @@ const productsData = [
     image: Joystick,
     badge: "Best Seller",
   },
+  {
+    id: 9,
+    name: "UGREEN HiTune X5 TWS Wireless Bluetooth 5.2",
+    category: "Accessories",
+    price: 310,
+    oldPrice: 520,
+    discount: 25,
+    rating: 4.9,
+    reviews: 290,
+    image: Earbuds2,
+    badge: "Best Seller",
+  },
+  {
+    id: 10,
+    name: "FFJ Wireless Gaming Mouse, 24000 DPI",
+    category: "Accessories",
+    price: 50,
+    oldPrice: 80,
+    discount: 25,
+    rating: 4.7,
+    reviews: 510,
+    image: Mouse,
+    badge: "Best Seller",
+  },
+  {
+    id: 11,
+    name: "Samsung S25 Ultra",
+    category: "Phones",
+    price: 1159,
+    oldPrice: 1499,
+    discount: 13,
+    rating: 4.8,
+    reviews: 807,
+    image: Samsung,
+    badge: "Featured",
+  },
+    {
+    id: 12,
+    name: "Premium Wireless Headphones",
+    category: "Headphones",
+    price: 299,
+    oldPrice: 399,
+    discount: 25,
+    rating: 4.5,
+    reviews: 1284,
+    image: hero,
+    badge: "Best Seller",
+  },
+    {
+    id: 13,
+    name: "Power Box",
+    category: "Accessories",
+    price: 299,
+    oldPrice: 399,
+    discount: 25,
+    rating: 4.5,
+    reviews: 1284,
+    image: PowerBank,
+    badge: "Best Seller",
+  },
+
 ];
 
 const Product = () => {

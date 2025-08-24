@@ -35,10 +35,10 @@ const About = () => {
         {/* Heading */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-200 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            About Shoppio
+            About Shoppie
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Founded in 2020, Shoppio has become the premier destination for luxury tech products.
+            Founded in 2020, Shoppie has become the premier destination for luxury tech products.
             We believe technology should enhance your lifestyle while reflecting your personal style.
           </p>
         </div>

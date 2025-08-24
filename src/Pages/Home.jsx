@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import hero from "../images/hero.jpg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Product from "./Product";
+import { Link } from "react-router";
 
 // Counter component for animation
 const Counter = ({ to, duration = 1200 }) => {
@@ -54,7 +55,7 @@ const Home = () => {
             <FaArrowRightLong />
           </button>
           <button className="border border-white/30 bg-gray-950 w-full md:w-auto text-white px-8 py-3 rounded-xl md:rounded-full font-semibold hover:bg-white/10 transition">
-            Sign in
+          <Link to="/login">Sign in</Link>
           </button>
         </div>
 

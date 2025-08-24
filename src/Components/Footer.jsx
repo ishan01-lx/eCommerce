@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
           <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-400 bg-clip-text text-transparent">
-            Shoppio
+            Shoppie
           </h2>
           <p className="mt-3 text-sm leading-6 text-gray-400">
             Premium tech products for the modern lifestyle. Curated with care,

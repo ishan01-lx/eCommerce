@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Login = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-200 to-purple-400 px-4">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-300 via-pink-700 to-purple-800 px-4">
       {/* Card */}
       <div className="bg-gray-900 text-white p-6 sm:p-8 rounded-2xl w-full max-w-sm sm:max-w-md shadow-lg">
         
@@ -45,7 +45,7 @@ const Login = () => {
         </div>
 
         {/* Sign in button */}
-        <button className="w-full bg-gradient-to-r from-purple-400 to-purple-600 py-3 rounded-lg font-semibold hover:opacity-90 text-sm sm:text-base">
+        <button className="w-full bg-gradient-to-r from-purple-300 to-purple-600  hover:bg-gradient-to-r hover:from-purple-600 hover:to-purple-200 transition-colors duration-500 py-3 rounded-lg font-semibold hover:opacity-90 text-sm sm:text-base">
           Sign In
         </button>
 

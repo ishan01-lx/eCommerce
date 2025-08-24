@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const Signup = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-200 to-purple-400 px-4 py-20">
+    <div className="flex items-center justify-center max-h-screen bg-gradient-to-r from-purple-300 via-pink-700 to-purple-800  px-4 py-20">
       {/* Card */}
       <div className="bg-gray-900 text-white p-6 sm:p-8 rounded-2xl w-full max-w-sm sm:max-w-md shadow-lg">
         {/* Back to Home */}
@@ -88,30 +88,10 @@ const Signup = () => {
         </div>
 
         {/* Create Account button */}
-        <button className="w-full bg-gradient-to-r from-purple-400 to-purple-600 py-3 rounded-lg font-semibold hover:opacity-90 text-sm sm:text-base">
+        <button className="w-full bg-gradient-to-r from-purple-200 to-purple-600 hover:bg-gradient-to-r hover:from-purple-600 hover:to-purple-200 transition-colors duration-500 py-3 rounded-lg font-semibold hover:opacity-90 text-sm sm:text-base">
           Create Account
         </button>
 
-        {/* Divider */}
-        <div className="flex items-center my-6">
-          <hr className="flex-grow border-gray-700" />
-          <span className="px-2 text-gray-500 text-xs sm:text-sm">
-            OR CONTINUE WITH
-          </span>
-          <hr className="flex-grow border-gray-700" />
-        </div>
-
-        {/* Social buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <button className="flex-1 bg-gray-800 py-3 rounded-lg hover:bg-gray-700 text-sm sm:text-base flex items-center justify-center gap-4">
-            <BsGoogle></BsGoogle>
-            Google
-          </button>
-          <button className="flex-1 bg-gray-800 py-3 rounded-lg hover:bg-gray-700 text-sm sm:text-base flex items-center justify-center gap-4">
-            <BsFacebook></BsFacebook>
-            Facebook
-          </button>
-        </div>
 
         {/* Footer links */}
         <div className="text-center mt-6 text-xs sm:text-sm text-gray-400">

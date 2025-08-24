@@ -34,7 +34,7 @@ const Navbar = () => {
             <div className="shrink-0">
               <Link to="/">
                 <p className="bg-gradient-to-r from-indigo-200 via-purple-400 to-pink-700 bg-clip-text text-transparent font-bold md:font-extrabold text-3xl hover:tracking-wide transition-all duration-300">
-                  Shopp<span className="text-amber-50 font-bold">io</span>
+                  Shopp<span className="text-amber-50 font-bold">ie</span>
                 </p>
               </Link>
             </div>

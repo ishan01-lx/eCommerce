@@ -6,22 +6,22 @@ const Contact = () => {
     {
       icon: <HiLocationMarker className="h-6 w-6 text-white" />,
       title: "Address",
-      details: ["123 Tech Street", "San Francisco, CA 94105"],
+      details: ["123 Buddha Road", "Bhagwan Pau, Kathmandu"],
     },
     {
       icon: <HiPhone className="h-6 w-6 text-white" />,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "Mon - Fri, 9AM - 6PM PST"],
+      details: ["+977 9861804767", "Sun - Fri, 9AM - 6PM"],
     },
     {
       icon: <HiMail className="h-6 w-6 text-white" />,
       title: "Email",
-      details: ["support@luxstore.com", "We'll respond within 24 hours"],
+      details: ["support@shoppie.com", "We'll respond within 24 hours"],
     },
     {
       icon: <HiClock className="h-6 w-6 text-white" />,
       title: "Business Hours",
-      details: ["Monday - Friday: 9AM - 6PM", "Saturday: 10AM - 4PM"],
+      details: ["Sunday - Friday: 9AM - 6PM", "Saturday: 10AM - 4PM"],
     },
   ];
 
@@ -54,7 +54,7 @@ const Contact = () => {
                   <input
                     id="firstName"
                     type="text"
-                    placeholder="John"
+                    placeholder="Ishan"
                     className="w-full mt-1 p-3 border border-gray-800 bg-gray-950 text-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
@@ -65,7 +65,7 @@ const Contact = () => {
                   <input
                     id="lastName"
                     type="text"
-                    placeholder="Doe"
+                    placeholder="Sitaula"
                     className="w-full mt-1 p-3 border border-gray-800 bg-gray-950 text-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                 <input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="ishan@example.com"
                   className="w-full mt-1 p-3 border border-gray-800 bg-gray-950 text-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
                 />
               </div>

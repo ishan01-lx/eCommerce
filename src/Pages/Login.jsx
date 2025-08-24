@@ -77,9 +77,9 @@ const Login = () => {
           </p>
           <p className="mt-2">
             Don’t have an account?{" "}
-            <span className="text-purple-400 cursor-pointer hover:underline">
+            <Link to="/signup" className="text-purple-400 cursor-pointer hover:underline">
               Sign up
-            </span>
+            </Link>
           </p>
         </div>
       </div>

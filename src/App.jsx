@@ -7,12 +7,13 @@ import About from "./Pages/About";
 import Product from "./Pages/Product";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 
 function App() {
   const location = useLocation();
 
   // Check if current route is "/login"
-  const hideLayout = location.pathname === "/login";
+  const hideLayout =     location.pathname === "/login" || location.pathname === "/signup";
 
   return (
     <>
@@ -24,6 +25,8 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
       </Routes>
 
       {!hideLayout && <Footer />}
